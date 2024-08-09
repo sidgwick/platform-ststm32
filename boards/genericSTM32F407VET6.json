@@ -2,7 +2,7 @@
   "build": {
     "core": "stm32",
     "cpu": "cortex-m4",
-    "extra_flags": "-DSTM32F407xx -DARDUINO_STM32GenericF407VET6 -DSTM32F4",
+    "extra_flags": "-DSTM32F407xx -DARDUINO_STM32GenericF407VET6 -DSTM32F4 -DSTM32F40_41xxx",
     "f_cpu": "168000000L",
     "hwids": [
       [
@@ -33,6 +33,7 @@
   "frameworks": [
     "arduino",
     "cmsis",
+    "spl",
     "stm32cube",
     "libopencm3"
   ],
@@ -45,6 +46,7 @@
     "protocols": [
       "stlink",
       "dfu",
+      "cmsis-dap",
       "jlink"
     ],
     "require_upload_port": true,
